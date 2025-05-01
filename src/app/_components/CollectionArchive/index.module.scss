@@ -6,7 +6,11 @@
   left: 0;
   top: calc(var(--base) * -5);
   @include mid-break {
+<<<<<<< HEAD
     top:  calc(var(--base) * -2);
+=======
+    top: calc(var(--base) * -2);
+>>>>>>> 162a78f (finished)
   }
 }
 
@@ -36,6 +40,7 @@
   }
 }
 
+<<<<<<< HEAD
 .list {
   position: relative;
 }
@@ -61,13 +66,37 @@
 
   @include small-break {
     grid-column-end: span 6;
+=======
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(30%, 1fr));
+  gap: 30px;
+  padding: 0;
+  width: 100%;
+
+  @include mid-break {
+    gap: 20px;
+  }
+
+  @include small-break {
+    grid-template-columns: 100%;
+>>>>>>> 162a78f (finished)
   }
 }
 
 .pagination {
   margin-top: calc(var(--base) * 2);
+<<<<<<< HEAD
+=======
+  display: flex;
+  justify-content: center;
+>>>>>>> 162a78f (finished)
 
   @include mid-break {
     margin-top: var(--base);
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 162a78f (finished)

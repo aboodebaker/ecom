@@ -12,7 +12,18 @@ const Categories: CollectionConfig = {
     {
       name: 'title',
       type: 'text',
+<<<<<<< HEAD
     },
+=======
+      required: true,
+    },
+    {
+      name: 'media',
+      type: 'upload',
+      relationTo: 'media',
+    }
+
+>>>>>>> 162a78f (finished)
   ],
 }
 

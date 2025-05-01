@@ -33,6 +33,13 @@ export const hero: Field = {
           label: 'Low Impact',
           value: 'lowImpact',
         },
+<<<<<<< HEAD
+=======
+        {
+          label: 'Custom Hero',
+          value: 'customHero',
+        }
+>>>>>>> 162a78f (finished)
       ],
     },
     richText({
@@ -52,7 +59,11 @@ export const hero: Field = {
       relationTo: 'media',
       required: true,
       admin: {
+<<<<<<< HEAD
         condition: (_, { type } = {}) => ['highImpact', 'mediumImpact'].includes(type),
+=======
+        condition: (_, { type } = {}) => ['highImpact', 'mediumImpact', 'customHero'].includes(type),
+>>>>>>> 162a78f (finished)
       },
     },
   ],

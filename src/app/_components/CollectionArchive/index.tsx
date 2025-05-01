@@ -11,6 +11,10 @@ import { PageRange } from '../PageRange'
 import { Pagination } from '../Pagination'
 
 import classes from './index.module.scss'
+<<<<<<< HEAD
+=======
+import { useFilter } from '../../_providers/Filter'
+>>>>>>> 162a78f (finished)
 
 type Result = {
   docs: (Product | string)[]
@@ -38,8 +42,14 @@ export type Props = {
 }
 
 export const CollectionArchive: React.FC<Props> = props => {
+<<<<<<< HEAD
   const {
     categories: catsFromProps,
+=======
+  const {categoryFilters, sort} = useFilter();
+
+  const {
+>>>>>>> 162a78f (finished)
     className,
     limit = 10,
     onResultChange,
@@ -49,7 +59,11 @@ export const CollectionArchive: React.FC<Props> = props => {
     relationTo,
     selectedDocs,
     showPageRange,
+<<<<<<< HEAD
     sort = '-createdAt',
+=======
+
+>>>>>>> 162a78f (finished)
   } = props
 
   const [results, setResults] = useState<Result>({
@@ -75,10 +89,13 @@ export const CollectionArchive: React.FC<Props> = props => {
   const isRequesting = useRef(false)
   const [page, setPage] = useState(1)
 
+<<<<<<< HEAD
   const categories = (catsFromProps || [])
     .map(cat => (typeof cat === 'object' ? cat?.id : cat))
     .join(',')
 
+=======
+>>>>>>> 162a78f (finished)
   const scrollToRef = useCallback(() => {
     const { current } = scrollRef
     if (current) {
@@ -116,10 +133,21 @@ export const CollectionArchive: React.FC<Props> = props => {
           page,
           sort,
           where: {
+<<<<<<< HEAD
             ...(categories
               ? {
                   categories: {
                     in: categories,
+=======
+            ...(categoryFilters && categoryFilters?.length > 0 
+
+              ? {
+                  categories: {
+                    in: 
+                    typeof categoryFilters === 'string'
+                    ? [categoryFilters]
+                    : categoryFilters.map((cat: string) => cat).join(','),
+>>>>>>> 162a78f (finished)
                   },
                 }
               : {}),
@@ -162,15 +190,26 @@ export const CollectionArchive: React.FC<Props> = props => {
     return () => {
       if (timer) clearTimeout(timer)
     }
+<<<<<<< HEAD
   }, [page, categories, relationTo, onResultChange, sort, limit, populateBy])
+=======
+  }, [page, categoryFilters, relationTo, onResultChange, sort, limit, populateBy])
+>>>>>>> 162a78f (finished)
 
   return (
     <div className={[classes.collectionArchive, className].filter(Boolean).join(' ')}>
       <div className={classes.scrollRef} ref={scrollRef} />
+<<<<<<< HEAD
       {!isLoading && error && <Gutter>{error}</Gutter>}
       <Fragment>
         {showPageRange !== false && populateBy !== 'selection' && (
           <Gutter>
+=======
+      {!isLoading && error && <div>{error}</div>}
+      <Fragment>
+        {showPageRange !== false && populateBy !== 'selection' && (
+          
+>>>>>>> 162a78f (finished)
             <div className={classes.pageRange}>
               <PageRange
                 collection={relationTo}
@@ -179,16 +218,27 @@ export const CollectionArchive: React.FC<Props> = props => {
                 totalDocs={results.totalDocs}
               />
             </div>
+<<<<<<< HEAD
           </Gutter>
         )}
         <Gutter>
+=======
+          
+        )}
+        <div>
+>>>>>>> 162a78f (finished)
           <div className={classes.grid}>
             {results.docs?.map((result, index) => {
               if (typeof result === 'object' && result !== null) {
                 return (
+<<<<<<< HEAD
                   <div className={classes.column} key={index}>
                     <Card doc={result} relationTo={relationTo} showCategories />
                   </div>
+=======
+                    <Card doc={result} relationTo={relationTo} showCategories />
+
+>>>>>>> 162a78f (finished)
                 )
               }
 
@@ -203,7 +253,11 @@ export const CollectionArchive: React.FC<Props> = props => {
               totalPages={results.totalPages}
             />
           )}
+<<<<<<< HEAD
         </Gutter>
+=======
+        </div>
+>>>>>>> 162a78f (finished)
       </Fragment>
     </div>
   )

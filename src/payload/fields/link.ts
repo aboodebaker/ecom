@@ -116,6 +116,15 @@ const link: LinkType = ({ appearances, disableLabel = false, overrides = {} } = 
             width: '50%',
           },
         },
+<<<<<<< HEAD
+=======
+        {
+          name: 'icon',
+          label: 'Icon',
+          type: 'upload',
+          relationTo: 'media',
+        },
+>>>>>>> 162a78f (finished)
       ],
     })
   } else {

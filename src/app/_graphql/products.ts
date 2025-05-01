@@ -1,5 +1,9 @@
 import { ARCHIVE_BLOCK, CALL_TO_ACTION, CONTENT, MEDIA_BLOCK } from './blocks'
+<<<<<<< HEAD
 import { CATEGORIES } from './categories'
+=======
+import { PRODUCT_CATEGORIES } from './categories'
+>>>>>>> 162a78f (finished)
 import { META } from './meta'
 
 export const PRODUCTS = `
@@ -19,7 +23,11 @@ export const PRODUCT = `
         id
         title
         stripeProductID
+<<<<<<< HEAD
         ${CATEGORIES}
+=======
+        ${PRODUCT_CATEGORIES}
+>>>>>>> 162a78f (finished)
         layout {
           ${CALL_TO_ACTION}
           ${CONTENT}

@@ -1,6 +1,10 @@
 import React from 'react'
 import { Metadata } from 'next'
+<<<<<<< HEAD
 
+=======
+import { Jost } from 'next/font/google'
+>>>>>>> 162a78f (finished)
 import { AdminBar } from './_components/AdminBar'
 import { Footer } from './_components/Footer'
 import { Header } from './_components/Header'
@@ -10,6 +14,15 @@ import { mergeOpenGraph } from './_utilities/mergeOpenGraph'
 
 import './_css/app.scss'
 
+<<<<<<< HEAD
+=======
+const jost = Jost({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-jost',
+} )
+
+>>>>>>> 162a78f (finished)
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -18,12 +31,20 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
+<<<<<<< HEAD
       <body>
+=======
+      <body className={`${jost.variable} `}>
+>>>>>>> 162a78f (finished)
         <Providers>
           <AdminBar />
           {/* @ts-expect-error */}
           <Header />
+<<<<<<< HEAD
           {children}
+=======
+          <main className='main'>{children}</main>
+>>>>>>> 162a78f (finished)
           {/* @ts-expect-error */}
           <Footer />
         </Providers>
