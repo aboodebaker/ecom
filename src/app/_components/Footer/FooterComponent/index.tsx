@@ -49,7 +49,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
                 className={classes.logo}
               />
             </Link>
-            {/* <p>{footer?.copyright ?? '© Default Store Name'}</p> */}
+            <p>{footer?.copyright}</p>
 
             <div className={classes.socialLinks}>
               {navItems.map(item => {
