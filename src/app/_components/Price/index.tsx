@@ -9,39 +9,14 @@ import { RemoveFromCartButton } from '../RemoveFromCartButton'
 import classes from './index.module.scss'
 
 export const priceFromJSON = (priceJSON: string, quantity: number = 1, raw?: boolean): string => {
-<<<<<<< HEAD
-  let price = ''
-
-  if (priceJSON) {
-    try {
-      const parsed = JSON.parse(priceJSON)?.data[0]
-      const priceValue = parsed.unit_amount * quantity
-      const priceType = parsed.type
-
-      if (raw) return priceValue.toString()
-
-      price = (priceValue / 100).toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD', // TODO: use `parsed.currency`
-      })
-
-      if (priceType === 'recurring') {
-        price += `/${
-          parsed.recurring.interval_count > 1
-            ? `${parsed.recurring.interval_count} ${parsed.recurring.interval}`
-            : parsed.recurring.interval
-        }`
-      }
-    } catch (e) {
-      console.error(`Cannot parse priceJSON`) // eslint-disable-line no-console
-    }
-=======
   const defaultPriceCents = 50000 // $500 in cents
   let price = ''
 
   try {
     const parsed = priceJSON ? JSON.parse(priceJSON)?.data[0] : null
-    const priceValue = parsed?.unit_amount ? parsed.unit_amount * quantity : defaultPriceCents * quantity
+    const priceValue = parsed?.unit_amount
+      ? parsed.unit_amount * quantity
+      : defaultPriceCents * quantity
     const priceType = parsed?.type
 
     if (raw) return priceValue.toString()
@@ -67,7 +42,6 @@ export const priceFromJSON = (priceJSON: string, quantity: number = 1, raw?: boo
       style: 'currency',
       currency: 'USD',
     })
->>>>>>> 162a78f (finished)
   }
 
   return price
@@ -100,20 +74,8 @@ export const Price: React.FC<{
       {typeof price?.actualPrice !== 'undefined' && price?.withQuantity !== '' && (
         <div className={classes.price}>
           <p>{price?.withQuantity}</p>
-<<<<<<< HEAD
-          {quantity > 1 && (
-            <small className={classes.priceBreakdown}>{`${price.actualPrice} x ${quantity}`}</small>
-          )}
         </div>
       )}
-      {button && button === 'addToCart' && (
-        <AddToCartButton product={product} appearance="default" />
-      )}
-      {button && button === 'removeFromCart' && <RemoveFromCartButton product={product} />}
-=======
-        </div>
-      )}
->>>>>>> 162a78f (finished)
     </div>
   )
 }

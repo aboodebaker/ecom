@@ -5,13 +5,9 @@
 
 :root {
   --base: 24px;
-<<<<<<< HEAD
-  --font-body: system-ui;
-  --font-mono: 'Roboto Mono', monospace;
-=======
+
   --font-body: "Jost", sans-serif;
   --font-mono: "Jost", sans-serif;
->>>>>>> 162a78f (finished)
 
   --gutter-h: 180px;
   --block-padding: 120px;
@@ -50,15 +46,7 @@ body,
 }
 
 body {
-<<<<<<< HEAD
-  font-family: var(--font-body);
-  margin: 0;
-  color: var(--theme-text);
-}
 
-::selection {
-  background: var(--theme-success-500);
-=======
   font-family: var(--font-jost);
   margin: 0;
   padding: 0;
@@ -74,16 +62,11 @@ body {
 
 ::selection {
   background: var(--color-dark-500);
->>>>>>> 162a78f (finished)
   color: var(--color-base-800);
 }
 
 ::-moz-selection {
-<<<<<<< HEAD
-  background: var(--theme-success-500);
-=======
   background: var(--color-dark-50);
->>>>>>> 162a78f (finished)
   color: var(--color-base-800);
 }
 
@@ -118,28 +101,13 @@ h6 {
 }
 
 p {
-<<<<<<< HEAD
-  margin: var(--base) 0;
 
-  @include mid-break {
-    margin: calc(var(--base) * .75) 0;
-  }
-=======
   margin: 0;
 
->>>>>>> 162a78f (finished)
 }
 
 ul,
 ol {
-<<<<<<< HEAD
-  padding-left: var(--base);
-  margin: 0 0 var(--base);
-}
-
-a {
-  color: currentColor;
-=======
   margin: 0;
   padding: 0;
   list-style: none;
@@ -148,7 +116,7 @@ a {
 a {
   color: var(--color-dark-500);
   text-decoration: none;
->>>>>>> 162a78f (finished)
+
 
   &:focus {
     opacity: .8;

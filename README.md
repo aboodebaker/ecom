@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 =======
 # com
 =======
->>>>>>> 162a78f (finished)
+
 # Payload E-Commerce Template
 
 This is the official [Payload E-Commerce Template](https://github.com/payloadcms/payload/blob/main/templates/ecommerce). Use it to power e-commerce businesses and online stores of all sizes. This repo includes a fully-working backend, enterprise-grade admin panel, and a beautifully designed, production-ready website.
@@ -324,7 +324,3 @@ The easiest way to deploy your project is to use [Payload Cloud](https://payload
 ## Questions
 
 If you have any issues or questions, reach out to us on [Discord](https://discord.com/invite/payload) or start a [GitHub discussion](https://github.com/payloadcms/payload/discussions).
-<<<<<<< HEAD
-=======
->>>>>>> 5f791af (Initial commit)
->>>>>>> 162a78f (finished)

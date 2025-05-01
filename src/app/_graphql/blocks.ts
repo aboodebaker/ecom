@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { CATEGORIES } from './categories'
-=======
 import { PRODUCT_CATEGORIES } from './categories'
->>>>>>> 162a78f (finished)
 import { LINK_FIELDS } from './link'
 import { MEDIA } from './media'
 import { META } from './meta'
@@ -46,11 +42,7 @@ export const ARCHIVE_BLOCK = `
   introContent
   populateBy
   relationTo
-<<<<<<< HEAD
-  ${CATEGORIES}
-=======
   ${PRODUCT_CATEGORIES}
->>>>>>> 162a78f (finished)
   limit
   selectedDocs {
     relationTo
@@ -72,11 +64,7 @@ export const ARCHIVE_BLOCK = `
         slug
         title
         priceJSON
-<<<<<<< HEAD
-        ${CATEGORIES}
-=======
         ${PRODUCT_CATEGORIES}
->>>>>>> 162a78f (finished)
         ${META}
       }
     }

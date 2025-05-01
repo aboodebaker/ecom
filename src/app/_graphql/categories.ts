@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-export const CATEGORIES = `categories {
-=======
 export const PRODUCT_CATEGORIES = `categories {
->>>>>>> 162a78f (finished)
+
   title
   id
   breadcrumbs {
@@ -10,8 +7,6 @@ export const PRODUCT_CATEGORIES = `categories {
     label
   }
 }`
-<<<<<<< HEAD
-=======
 
 export const CATEGORIES = `
   query Categories {
@@ -28,4 +23,3 @@ export const CATEGORIES = `
       }
     }
   }`
->>>>>>> 162a78f (finished)

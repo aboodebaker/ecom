@@ -97,11 +97,7 @@ export const CheckoutForm: React.FC<{}> = () => {
 
   return (
     <form onSubmit={handleSubmit} className={classes.form}>
-<<<<<<< HEAD
-      {error && <Message error={error} />}
-=======
       <p>Payment and intergration with stripe is not ative as this is a demo site</p>
->>>>>>> 162a78f (finished)
       <PaymentElement />
       <div className={classes.actions}>
         <Button label="Back to cart" href="/cart" appearance="secondary" />
