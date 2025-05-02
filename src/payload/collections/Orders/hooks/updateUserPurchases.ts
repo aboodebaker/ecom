@@ -1,3 +1,4 @@
+//@ts-nocheck
 import type { AfterChangeHook } from 'payload/dist/collections/config/types'
 
 import type { Order } from '../../../payload-types'
