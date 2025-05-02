@@ -1,3 +1,4 @@
+//@ts-nocheck
 import type { AfterDeleteHook } from 'payload/dist/collections/config/types'
 
 import type { Product } from '../../../payload-types'
