@@ -19,7 +19,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "outDir": "dist",
-    "rootDir": "src",
     "isolatedModules": true,
     "plugins": [
       {
