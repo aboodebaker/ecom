@@ -12,12 +12,14 @@
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "noEmit": false,
     "incremental": true,
     "jsx": "preserve",
     "module": "CommonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "outDir": "dist",
+    "rootDir": "src"
     "isolatedModules": true,
     "plugins": [
       {
