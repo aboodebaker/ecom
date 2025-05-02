@@ -5,6 +5,9 @@ FROM base as builder
 WORKDIR /home/node/app
 COPY package*.json ./
 
+ENV DATABASE_URI=mongodb+srv://yaseenaboobaker1:Y.a.2786@clusterecom.tntaydl.mongodb.net/?retryWrites=true&w=majority&appName=ClusterEcom
+ENV PAYLOAD_SECRET=alsdfj23jasdfj
+
 COPY . .
 RUN yarn install
 RUN yarn build
