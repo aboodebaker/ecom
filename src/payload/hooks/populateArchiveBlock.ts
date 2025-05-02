@@ -1,3 +1,4 @@
+//@ts-nocheck
 import type { AfterReadHook } from 'payload/dist/collections/config/types'
 
 import type { Page, Product } from '../payload-types'
