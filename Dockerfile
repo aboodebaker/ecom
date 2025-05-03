@@ -18,12 +18,16 @@ ENV NODE_ENV=production
 ENV PAYLOAD_CONFIG_PATH=dist/payload/payload.config.js
 
 WORKDIR /home/node/app
-COPY package*.json  ./
+COPY package*.json ./
 COPY yarn.lock ./
-
 RUN yarn install --production
+
+# Copy necessary build outputs
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
+COPY --from=builder /home/node/app/.next ./.next
+COPY --from=builder /home/node/app/public ./public
+COPY --from=builder /home/node/app/next.config.js ./next.config.js
 
 EXPOSE 3000
 
